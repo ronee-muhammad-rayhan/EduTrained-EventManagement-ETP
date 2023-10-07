@@ -1,0 +1,272 @@
+[
+    {
+      "id": 1,
+      "title": "JavaScript Programming for Beginners",
+      "description": "Learn the basics of JavaScript programming, from variables and data types to functions and objects. This course is perfect for beginners with no prior programming experience.",
+      "start_date": "2023-10-09",
+      "end_date": "2023-10-13",
+      "location": "Online",
+      "price": 199,
+      "speakers": [
+        {
+          "name": "Jane Doe",
+          "title": "Software Engineer",
+          "bio": "Jane Doe is a software engineer with over 5 years of experience. She is passionate about teaching and helping others learn to code.",
+          "image": "https://example.com/jane-doe.jpg"
+        }
+      ],
+      "image": "https://example.com/javascript-programming-for-beginners.jpg",
+      "safety_guidelines": [
+        "Always wear a mask and social distance during the in-person portion of the course.",
+        "Wash your hands frequently with soap and water."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "React JS for Beginners",
+      "description": "Learn the basics of React JS, a popular JavaScript library for building user interfaces. This course is perfect for beginners with some prior JavaScript programming experience.",
+      "start_date": "2023-10-16",
+      "end_date": "2023-10-20",
+      "location": "Online",
+      "price": 299,
+      "speakers": [
+        {
+          "name": "John Smith",
+          "title": "Software Engineer",
+          "bio": "John Smith is a software engineer with over 5 years of experience. He is an expert in React JS and JavaScript.",
+          "image": "https://example.com/john-smith.jpg"
+        }
+      ],
+      "image": "https://example.com/react-js-for-beginners.jpg",
+      "safety_guidelines": [
+        "Always wear a mask and social distance during the in-person portion of the course.",
+        "Wash your hands frequently with soap and water."
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Node.js for Beginners",
+      "description": "Learn the basics of Node.js, a popular JavaScript runtime environment for building server-side applications. This course is perfect for beginners with some prior JavaScript programming experience.",
+      "start_date": "2023-10-23",
+      "end_date": "2023-10-27",
+      "location": "Online",
+      "price": 399,
+      "speakers": [
+        {
+          "name": "Mary Johnson",
+          "title": "Software Engineer",
+          "bio": "Mary Johnson is a software engineer with over 5 years of experience. She is an expert in Node.js and JavaScript.",
+          "image": "https://example.com/mary-johnson.jpg"
+        }
+      ],
+      "image": "https://example.com/node-js-for-beginners.jpg",
+      "safety_guidelines": [
+        "Always wear a mask and social distance during the in-person portion of the course.",
+        "Wash your hands frequently with soap and water."
+      ]
+    },
+    {
+        "id": 4,
+        "title": "JavaScript for Web Development",
+        "description": "Learn how to use JavaScript to build dynamic and interactive web pages. This course is designed for students with some prior HTML and CSS experience.",
+        "start_date": "2023-10-30",
+        "end_date": "2023-11-03",
+        "location": "Online",
+        "price": 499,
+        "speakers": [
+          {
+            "name": "David Miller",
+            "title": "Web Developer",
+            "bio": "David Miller is a web developer with over 10 years of experience. He is an expert in JavaScript and web development.",
+            "image": "https://example.com/david-miller.jpg"
+          }
+        ],
+        "image": "https://example.com/javascript-for-web-development.jpg",
+        "safety_guidelines": [
+          "Always wear a mask and social distance during the in-person portion of the course.",
+          "Wash your hands frequently with soap and water."
+        ]
+      },
+      {
+        "id": 5,
+        "title": "JavaScript for Data Science",
+        "description": "Learn how to use JavaScript to clean, analyze, and visualize data. This course is designed for students with some prior experience with data science and statistics.",
+        "start_date": "2023-11-06",
+        "end_date": "2023-11-10",
+        "location": "Online",
+        "price": 599,
+        "speakers": [
+          {
+            "name": "Susan Williams",
+            "title": "Software Engineer",
+            "bio": "Susan Williams is a software engineer with over 10 years of experience. She is an expert in JavaScript and web development.",
+            "image": "https://example.com/susan-williams.jpg"
+          }
+        ],
+        "image": "https://example.com/javascript-for-data-science.jpg",
+        "safety_guidelines": [
+          "Always wear a mask and social distance during the in-person portion of the course.",
+          "Wash your hands frequently with soap and water."
+        ]
+      },
+      {
+        "id": 6,
+        "title": "JavaScript Advanced Concepts",
+        "description": "Learn advanced JavaScript concepts, such as closures, prototypes, and regular expressions. This course is designed for students with some prior JavaScript programming experience.",
+        "start_date": "2023-11-13",
+        "end_date": "2023-11-17",
+        "location": "Online",
+        "price": 699,
+        "speakers": [
+          {
+            "name": "Peter Jones",
+            "title": "Software Engineer",
+            "bio": "Peter Jones is a software engineer with over 5 years of experience. He is an expert in JavaScript testing and web development.",
+            "image": "https://example.com/peter-jones.jpg"
+          }
+        ],
+        "image": "https://example.com/javascript-advanced-concepts.jpg",
+        "safety_guidelines": [
+          "Always wear a mask and social distance during the in-person portion of the course.",
+          "Wash your hands frequently with soap and water."
+        ]
+      },
+      {
+        "id": 7,
+        "title": "JavaScript Testing",
+        "description": "Learn how to test JavaScript code using popular testing frameworks such as Jest and Jasmine. This course is designed for students with some prior JavaScript programming experience.",
+        "start_date": "2023-11-20",
+        "end_date": "2023-11-24",
+        "location": "Online",
+        "price": 799,
+        "speakers": [
+          {
+            "name": "Michael Brown",
+            "title": "Software Engineer",
+            "bio": "Michael Brown is a software engineer with over 10 years of experience. He is an expert in JavaScript design patterns and web development.",
+            "image": "https://example.com/michael-brown.jpg"
+          }
+        ],
+        "image": "https://example.com/javascript-testing.jpg",
+        "safety_guidelines": [
+          "Always wear a mask and social distance during the in-person portion of the course.",
+          "Wash your hands frequently with soap and water."
+        ]
+      },
+      {
+        "id": 8,
+        "title": "JavaScript Design Patterns",
+        "description": "Learn how to use JavaScript design patterns to write reusable, maintainable, and scalable code. This course is designed for students with some prior JavaScript programming experience.",
+        "start_date": "2023-11-27",
+        "end_date": "2023-12-01",
+        "location": "Online",
+        "price": 899,
+        "speakers": [
+          {
+            "name": "Sarah Green",
+            "title": "Game Developer",
+            "bio": "Sarah Green is a game developer with over 5 years of experience. She is an expert in JavaScript game development.",
+            "image": "https://example.com/sarah-green.jpg"
+          }
+        ],
+        "image": "https://example.com/javascript-design-patterns.jpg",
+        "safety_guidelines": [
+          "Always wear a mask and social distance during the in-person portion of the course.",
+          "Wash your hands frequently with soap and water."
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Web Development with HTML, CSS, ExpressJS, and MongoDB",
+        "description": "Learn how to build dynamic and interactive web applications using HTML, CSS, ExpressJS, and MongoDB. This course is designed for students with some prior experience with web development.",
+        "start_date": "2023-12-04",
+        "end_date": "2023-12-08",
+        "location": "Online",
+        "price": 999,
+        "speakers": [
+          {
+            "name": "David Miller",
+            "title": "Web Developer",
+            "bio": "David Miller is a web developer with over 10 years of experience. He is an expert in JavaScript and web development.",
+            "image": "https://example.com/david-miller.jpg"
+          }
+        ],
+        "image": "https://example.com/web-development-with-html-css-expressjs-and-mongodb.jpg",
+        "safety_guidelines": [
+          "Always wear a mask and social distance during the in-person portion of the course.",
+          "Wash your hands frequently with soap and water."
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Full-Stack Web Development Bootcamp",
+        "description": "Learn the essential skills you need to become a full-stack web developer in this comprehensive bootcamp. You'll learn HTML, CSS, JavaScript, Node.js, ExpressJS, React, and MongoDB.",
+        "start_date": "2024-01-08",
+        "end_date": "2024-03-08",
+        "location": "Hybrid",
+        "price": 1999,
+        "speakers": [
+          {
+            "name": "Alice Smith",
+            "title": "Web Developer",
+            "bio": "Alice Smith is a web developer with over 5 years of experience. She is an expert in JavaScript and full-stack development.",
+            "image": "https://example.com/alice-smith.jpg"
+          },
+          {
+            "name": "Bob Jones",
+            "title": "Web Developer",
+            "bio": "Bob Jones is a web developer with over 3 years of experience. He is an expert in React and MongoDB.",
+            "image": "https://example.com/bob-jones.jpg"
+          }
+        ],
+        "image": "https://example.com/full-stack-web-development-bootcamp.jpg",
+        "safety_guidelines": [
+          "Always wear a mask and social distance during the in-person portion of the course.",
+          "Wash your hands frequently with soap and water."
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Machine Learning with Python",
+        "description": "Learn how to build and train machine learning models using Python. This course is designed for students with some prior experience with programming.",
+        "start_date": "2024-02-12",
+        "end_date": "2024-04-05",
+        "location": "Online",
+        "price": 1499,
+        "speakers": [
+          {
+            "name": "Carol Williams",
+            "title": "Machine Learning Engineer",
+            "bio": "Carol Williams is a machine learning engineer with over 7 years of experience. She is an expert in Python and machine learning.",
+            "image": "https://example.com/carol-williams.jpg"
+          }
+        ],
+        "image": "https://example.com/machine-learning-with-python.jpg",
+        "safety_guidelines": [
+          "Always take breaks when working on machine learning projects.",
+          "Don't be afraid to ask for help if you get stuck."
+        ]
+      },
+      {
+        "id": 12,
+        "title": "Data Science with R",
+        "description": "Learn how to clean, analyze, and visualize data using R. This course is designed for students with some prior experience with programming.",
+        "start_date": "2024-03-04",
+        "end_date": "2024-05-03",
+        "location": "Hybrid",
+        "price": 1299,
+        "speakers": [
+          {
+            "name": "Dave Brown",
+            "title": "Data Scientist",
+            "bio": "Dave Brown is a data scientist with over 6 years of experience. He is an expert in R and data science.",
+            "image": "https://example.com/dave-brown.jpg"
+          }
+        ],
+        "image": "https://example.com/data-science-with-r.jpg",
+        "safety_guidelines": [
+          "Always back up your data before working on it.",
+          "Be careful when sharing sensitive data."
+        ]
+      }
+    ]
