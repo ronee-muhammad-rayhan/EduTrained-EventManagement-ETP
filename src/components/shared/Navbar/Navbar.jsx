@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
     return (
         <nav className="md:flex justify-between">
-            <div className="text-2xl">This is NAvbar</div>
+            <div className="text-2xl">This is Navbar</div>
             <div id="navbar" className="flex gap-2">
                 {/* <NavLink to='/' className={({ isActive, isPending }) => isPending ? 'pending' : isActive ? 'active' : ''}>Home</NavLink> */}
 
