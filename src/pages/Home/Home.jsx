@@ -1,6 +1,7 @@
 import Navbar from "../../components/shared/Navbar/Navbar";
 
 const Home = () => {
+    console.log("home");
     return (
         <div>
             <Navbar></Navbar>
