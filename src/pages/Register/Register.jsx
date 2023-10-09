@@ -5,19 +5,19 @@ const Register = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <h3 className="text-3xl">Please Register</h3>
-            <form>
+            <h3 className="text-3xl text-center">Please Register</h3>
+            <form className="md:w-3/4 lg:w-1/2 mx-auto">
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                    <input type="email" placeholder="email" className="input input-bordered" required />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
-                    <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                    <input type="password" placeholder="password" className="input input-bordered" required />
                     <label className="label">
                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                     </label>
@@ -26,7 +26,7 @@ const Register = () => {
                     <button className="btn btn-primary">Register</button>
                 </div>
             </form>
-            <p>Already have an account? <Link className="text-blue-600" to='/login'>Login</Link></p>
+            <p className="text-center">Already have an account? <Link className="text-blue-600" to='/login'>Login</Link></p>
         </div>
     );
 };
