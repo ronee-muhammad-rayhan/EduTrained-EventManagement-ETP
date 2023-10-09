@@ -8,6 +8,7 @@ import NotFound from "../pages/NotFoundPage/NotFound";
 import PrivateRoutes from "./ProtectedRoutes/PrivateRoutes";
 import Dashboard from "../pages/Dashboard/Dashboard";
 
+
 export const router = createBrowserRouter([
     {
         path: '/',

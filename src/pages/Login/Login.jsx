@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/shared/Navbar/Navbar";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
-    const { user, updateUser } = useAuth();
+    const { updateUser } = useAuth();
+
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
+
     const form = useRef(null);
     const { signIn } = useAuth();
 
@@ -19,8 +23,10 @@ const Login = () => {
             .then((userCredential) => {
                 console.log(userCredential.user);
                 updateUser(userCredential.user);
+                navigate('/dashboard');
             })
             .catch((error) => {
+                setError(error);
                 console.error(error);
             });
     }
@@ -50,6 +56,7 @@ const Login = () => {
                 </div>
             </form>
             <p className="text-center">Don&apos;t have an account? <Link className="text-blue-600" to='/register'>Register</Link></p>
+            <p>{error}</p>
         </div>
     );
 };
