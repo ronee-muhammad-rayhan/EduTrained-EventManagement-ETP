@@ -7,3 +7,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # b8a9-event-management-ronee-muhammad-rayhan
+
+
+https://stackoverflow.com/questions/44927401/how-to-update-to-a-specific-commit-in-git
