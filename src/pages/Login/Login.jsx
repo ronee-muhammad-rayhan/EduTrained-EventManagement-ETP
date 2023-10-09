@@ -4,6 +4,7 @@ import { useRef } from "react";
 import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
+    const { updateUser } = useAuth();
     const form = useRef(null);
     const { signIn } = useAuth();
 
@@ -17,6 +18,7 @@ const Login = () => {
         signIn(email, password)
             .then((userCredential) => {
                 console.log(userCredential.user);
+                updateUser(userCredential.user);
             })
             .catch((error) => {
                 console.error(error);

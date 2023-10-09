@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import { useRef } from "react";
 
 const Register = () => {
+    const { updateUser } = useAuth();
     const form = useRef(null);
     const { createUser } = useAuth();
 
@@ -17,6 +18,7 @@ const Register = () => {
         createUser(email, password)
             .then((userCredential) => {
                 console.log(userCredential.user);
+                updateUser(userCredential.user);
             })
             .catch((error) => {
                 console.error(error);
