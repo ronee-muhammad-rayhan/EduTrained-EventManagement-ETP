@@ -28,35 +28,6 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="md:flex justify-between">
-                <div className="text-2xl">This is Navbar</div>
-                <div id="navbar" className="flex gap-2">
-                    {/* <NavLink to='/' className={({ isActive, isPending }) => isPending ? 'pending' : isActive ? 'active' : ''}>Home</NavLink> */}
-
-                    <NavLink to='/' style={({ isActive, isPending }) => {
-                        return {
-                            // fontWeight: isActive ? "bold" : "",
-                            // color: isPending ? "red" : "black",
-                            color: isPending ? 'blue' : isActive ? 'red' : 'black'
-                        };
-                    }}>Home</NavLink>
-                    <NavLink to='/login' style={({ isActive, isPending }) => {
-                        return {
-                            // fontWeight: isActive ? "bold" : "",
-                            // color: isPending ? "red" : "black",
-                            color: isPending ? 'blue' : isActive ? 'red' : 'black'
-                        };
-                    }}>Login</NavLink>
-                    <NavLink to='/register' style={({ isActive, isPending }) => {
-                        return {
-                            // fontWeight: isActive ? "bold" : "",
-                            // color: isPending ? "red" : "black",
-                            color: isPending ? 'blue' : isActive ? 'red' : 'black'
-                        };
-                    }}>Register</NavLink>
-                </div>
-
-            </nav>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -67,7 +38,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a className="btn btn-ghost normal-case text-xl">Event Management</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -75,7 +46,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <a className="btn">Login|Logout</a>
                 </div>
             </div>
         </>

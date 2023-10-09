@@ -1,11 +1,11 @@
-import Navbar from "../../components/shared/Navbar/Navbar";
+import Banner from "./Banner";
 
 const Home = () => {
     console.log("home");
     return (
         <div>
-            <Navbar></Navbar>
             <div className="text-3xl">This is Homepage</div>
+            <Banner></Banner>
         </div>
     );
 };
