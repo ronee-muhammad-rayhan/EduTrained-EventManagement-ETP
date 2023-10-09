@@ -5,7 +5,7 @@ import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
     const form = useRef(null);
-    const { createUser } = useAuth();
+    const { signIn } = useAuth();
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -14,7 +14,7 @@ const Login = () => {
         const email = formdata.get('email');
         const password = formdata.get('password');
         console.log(email, password);
-        createUser(email, password)
+        signIn(email, password)
             .then((userCredential) => {
                 console.log(userCredential.user);
             })

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import { createContext, useState } from "react";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
 import useAuth from "../hooks/useAuth";
 
@@ -17,6 +17,9 @@ const AuthProvider = ({ children }) => {
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
+    const signIn = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password);
+    }
 
     const updateUser = (user) => {
         setUser(user);
@@ -26,6 +29,7 @@ const AuthProvider = ({ children }) => {
         user,
         createUser,
         updateUser,
+        signIn,
     }
 
     return (
