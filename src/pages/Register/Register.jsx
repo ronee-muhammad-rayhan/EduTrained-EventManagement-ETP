@@ -20,6 +20,12 @@ const Register = () => {
         const email = formdata.get('email');
         const password = formdata.get('password');
         console.log(email, password);
+        const passwordRegex = /^(?=.*[A-Z])(?=.*[^a-zA-Z\d]).{6,}$/;
+        if (passwordRegex.test(password)) {
+            console.log("Password is valid");
+        } else {
+            return console.log("Password should atleast 6 characters long with minimum one capital letter and one special character");
+        }
         createUser(email, password)
             .then((userCredential) => {
                 console.log(userCredential.user);
@@ -29,7 +35,7 @@ const Register = () => {
             })
             .catch((error) => {
                 // setIsAuthenticated(false);
-                setError(error);
+                setError(error.message);
                 console.error(error);
             });
     }
@@ -58,7 +64,7 @@ const Register = () => {
                 </div>
             </form>
             <p className="text-center">Already have an account? <Link className="text-blue-600" to='/login'>Login</Link></p>
-            <p>{error}</p>
+            <p className="text-center text-red-500">{error}</p>
         </div>
     );
 }

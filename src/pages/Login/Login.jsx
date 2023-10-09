@@ -26,7 +26,7 @@ const Login = () => {
                 navigate('/dashboard');
             })
             .catch((error) => {
-                setError(error);
+                setError(error.message);
                 console.error(error);
             });
     }
@@ -56,7 +56,7 @@ const Login = () => {
                 </div>
             </form>
             <p className="text-center">Don&apos;t have an account? <Link className="text-blue-600" to='/register'>Register</Link></p>
-            <p>{error}</p>
+            <p className="text-center text-red-600">{error}</p>
         </div>
     );
 };
