@@ -4,7 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import { useRef } from "react";
 
 const Register = () => {
-    const { updateUser } = useAuth();
+    const { user, updateUser } = useAuth();
     const form = useRef(null);
     const { createUser } = useAuth();
 
