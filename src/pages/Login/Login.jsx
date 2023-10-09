@@ -27,7 +27,7 @@ const Login = () => {
         <div>
             <Navbar></Navbar>
             <h3 className="text-3xl text-center">Please Login</h3>
-            <form ref={form} id="form" className="md:w-3/4 lg:w-1/2 mx-auto" onSubmit={handleSubmit}>
+            <form ref={form} id="login-form" className="md:w-3/4 lg:w-1/2 mx-auto" onSubmit={handleSubmit}>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
