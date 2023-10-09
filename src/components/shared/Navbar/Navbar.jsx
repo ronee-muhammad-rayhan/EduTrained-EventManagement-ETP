@@ -2,12 +2,13 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
-    const { user, logOut } = useAuth();
+    const { user, logOut, updateUser } = useAuth();
 
     const handleLogOut = () => {
         logOut()
             .then(() => {
                 // Sign-out successful.
+                updateUser(null);
                 console.log('log-out successful');
             }).catch((error) => {
                 // An error happened.
@@ -60,9 +61,9 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {
-                        user && user.email
+                        user && user?.email
                     }
-                    <img src={user?.photoURL} alt="user.displayName" />
+                    <img src={user?.photoURL} alt={user?.displayName} />
                     {
                         user ? <a onClick={handleLogOut} className="btn">Logout</a> : <Link to='/login' className="btn">Login</Link>
                     }

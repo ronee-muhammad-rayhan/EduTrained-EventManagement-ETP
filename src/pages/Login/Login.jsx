@@ -4,7 +4,7 @@ import { useRef } from "react";
 import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
-    const { user, updateUser } = useAuth();
+    const { updateUser } = useAuth();
     const form = useRef(null);
     const { signIn } = useAuth();
 
@@ -46,7 +46,7 @@ const Login = () => {
                     </label>
                 </div>
                 <div className="form-control mt-6">
-                    <Link to={user && '/dashboard'}><button type="submit" name="submit" className="btn btn-primary">Login</button></Link>
+                    <button type="submit" name="submit" className="btn btn-primary">Login</button>
                 </div>
             </form>
             <p className="text-center">Don&apos;t have an account? <Link className="text-blue-600" to='/register'>Register</Link></p>
