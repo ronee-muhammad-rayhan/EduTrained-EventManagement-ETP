@@ -62,6 +62,7 @@ const Navbar = () => {
                     {
                         user && user.email
                     }
+                    <img src={user?.photoURL} alt="user.displayName" />
                     {
                         user ? <a onClick={handleLogOut} className="btn">Logout</a> : <Link to='/login' className="btn">Login</Link>
                     }
