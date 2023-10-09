@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import { createContext, useState } from "react";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
+import useAuth from "../hooks/useAuth";
 
 
 export const AuthContext = createContext(null);
@@ -9,6 +10,7 @@ export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
+    useAuth();
 
     const [user, setUser] = useState(null);
 
@@ -28,9 +30,9 @@ const AuthProvider = ({ children }) => {
     }
 
     return (
-        <AuthProvider value={authInfo}>
+        <AuthContext.Provider value={authInfo}>
             {children}
-        </AuthProvider>
+        </AuthContext.Provider>
     );
 };
 
