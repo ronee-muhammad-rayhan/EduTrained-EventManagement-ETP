@@ -15,7 +15,7 @@
           "image": "https://example.com/jane-doe.jpg"
         }
       ],
-      "image": "https://example.com/javascript-programming-for-beginners.jpg",
+      "image": "https://i.ibb.co/kHdXp8X/s01-javascript.jpg",
       "safety_guidelines": [
         "Always wear a mask and social distance during the in-person portion of the course.",
         "Wash your hands frequently with soap and water."
@@ -37,7 +37,7 @@
           "image": "https://example.com/john-smith.jpg"
         }
       ],
-      "image": "https://example.com/react-js-for-beginners.jpg",
+      "image": "https://i.ibb.co/kDSmgzG/s02-react.jpg",
       "safety_guidelines": [
         "Always wear a mask and social distance during the in-person portion of the course.",
         "Wash your hands frequently with soap and water."
@@ -59,7 +59,7 @@
           "image": "https://example.com/mary-johnson.jpg"
         }
       ],
-      "image": "https://example.com/node-js-for-beginners.jpg",
+      "image": "https://i.ibb.co/pZJbCXX/s03-node.jpg",
       "safety_guidelines": [
         "Always wear a mask and social distance during the in-person portion of the course.",
         "Wash your hands frequently with soap and water."
@@ -81,7 +81,7 @@
             "image": "https://example.com/david-miller.jpg"
           }
         ],
-        "image": "https://example.com/javascript-for-web-development.jpg",
+        "image": "https://i.ibb.co/3TkTCn5/s04-web-development.jpg",
         "safety_guidelines": [
           "Always wear a mask and social distance during the in-person portion of the course.",
           "Wash your hands frequently with soap and water."
@@ -103,7 +103,7 @@
             "image": "https://example.com/susan-williams.jpg"
           }
         ],
-        "image": "https://example.com/javascript-for-data-science.jpg",
+        "image": "https://i.ibb.co/2N0QGBz/s05-datascience.jpg",
         "safety_guidelines": [
           "Always wear a mask and social distance during the in-person portion of the course.",
           "Wash your hands frequently with soap and water."
@@ -125,7 +125,7 @@
             "image": "https://example.com/peter-jones.jpg"
           }
         ],
-        "image": "https://example.com/javascript-advanced-concepts.jpg",
+        "image": "https://i.ibb.co/rdZDDcv/s06-js-advanced.jpg",
         "safety_guidelines": [
           "Always wear a mask and social distance during the in-person portion of the course.",
           "Wash your hands frequently with soap and water."
@@ -147,7 +147,7 @@
             "image": "https://example.com/michael-brown.jpg"
           }
         ],
-        "image": "https://example.com/javascript-testing.jpg",
+        "image": "https://i.ibb.co/KGZPwTr/s07-testing.jpg",
         "safety_guidelines": [
           "Always wear a mask and social distance during the in-person portion of the course.",
           "Wash your hands frequently with soap and water."
@@ -169,7 +169,7 @@
             "image": "https://example.com/sarah-green.jpg"
           }
         ],
-        "image": "https://example.com/javascript-design-patterns.jpg",
+        "image": "https://i.ibb.co/gwTBRXP/s08-js-design-patterns.jpg",
         "safety_guidelines": [
           "Always wear a mask and social distance during the in-person portion of the course.",
           "Wash your hands frequently with soap and water."
@@ -191,7 +191,7 @@
             "image": "https://example.com/david-miller.jpg"
           }
         ],
-        "image": "https://example.com/web-development-with-html-css-expressjs-and-mongodb.jpg",
+        "image": "https://i.ibb.co/XDPbvTg/s09-mern.jpg",
         "safety_guidelines": [
           "Always wear a mask and social distance during the in-person portion of the course.",
           "Wash your hands frequently with soap and water."
@@ -219,7 +219,7 @@
             "image": "https://example.com/bob-jones.jpg"
           }
         ],
-        "image": "https://example.com/full-stack-web-development-bootcamp.jpg",
+        "image": "https://i.ibb.co/87s87sv/s10-fullstack-web-development.jpg",
         "safety_guidelines": [
           "Always wear a mask and social distance during the in-person portion of the course.",
           "Wash your hands frequently with soap and water."
@@ -241,7 +241,7 @@
             "image": "https://example.com/carol-williams.jpg"
           }
         ],
-        "image": "https://example.com/machine-learning-with-python.jpg",
+        "image": "https://i.ibb.co/PMqZQ70/s11-python-data-science.jpg",
         "safety_guidelines": [
           "Always take breaks when working on machine learning projects.",
           "Don't be afraid to ask for help if you get stuck."
@@ -263,7 +263,7 @@
             "image": "https://example.com/dave-brown.jpg"
           }
         ],
-        "image": "https://example.com/data-science-with-r.jpg",
+        "image": "https://i.ibb.co/C5BSKX7/s12-data-science-with-R.jpg",
         "safety_guidelines": [
           "Always back up your data before working on it.",
           "Be careful when sharing sensitive data."
