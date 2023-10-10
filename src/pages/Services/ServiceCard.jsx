@@ -1,7 +1,13 @@
 
 import PropTypes from "prop-types"
+import { useNavigate } from "react-router-dom";
 const ServiceCard = ({ service }) => {
-    const { image, title, price, description } = service;
+    const { id, image, title, price, description } = service;
+    const navigate = useNavigate();
+
+    const handleSeeDetails = () => {
+        navigate(`/services/${id}`);
+    }
     return (
         <div className="">
             {/* <img src={image} alt="" /> */}
@@ -16,7 +22,7 @@ const ServiceCard = ({ service }) => {
                         <p>{description}</p>
                         <p>{price}</p>
                     </div>
-                    <button className="btn btn-secondary flex-0">See Details</button>
+                    <button onClick={handleSeeDetails} className="btn btn-secondary flex-0">See Details</button>
                 </div>
             </div>
         </div>
@@ -28,7 +34,8 @@ ServiceCard.propTypes = {
         description: PropTypes.any,
         image: PropTypes.any,
         price: PropTypes.any,
-        title: PropTypes.any
+        title: PropTypes.any,
+        id: PropTypes.any,
     })
 }
 

@@ -40,8 +40,9 @@ export const router = createBrowserRouter([
                 loader: () => fetch('/data/events.json'),
             },
             {
-                path: '/service-details/:id',
-                element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
+                path: '/services/:id',
+                // element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
+                element: <ServiceDetails></ServiceDetails>,
                 loader: () => fetch('/data/events.json'),
             },
             {
