@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-import Navbar from "../../components/shared/Navbar/Navbar";
 import useAuth from "../../hooks/useAuth";
 import { useRef, useState } from "react";
 
@@ -40,10 +39,9 @@ const Register = () => {
             });
     }
     return (
-        <div>
-            <Navbar></Navbar>
+        <div className="w-full mx-auto">
             <h3 className="text-3xl text-center">Please Register</h3>
-            <form ref={form} id="register-form" className="md:w-3/4 lg:w-1/2 mx-auto" onSubmit={handleSubmit}>
+            <form ref={form} id="register-form" className="w-[90%] md:w-3/4 lg:w-1/2 mx-auto" onSubmit={handleSubmit}>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>

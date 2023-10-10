@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-import Navbar from "../../components/shared/Navbar/Navbar";
 import { useRef, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 
@@ -33,7 +32,6 @@ const Login = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
             <h3 className="text-3xl text-center">Please Login</h3>
             <form ref={form} id="login-form" className="md:w-3/4 lg:w-1/2 mx-auto" onSubmit={handleSubmit}>
                 <div className="form-control">
