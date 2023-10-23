@@ -13,8 +13,10 @@ const AuthProvider = ({ children }) => {
     useAuth();
 
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
@@ -23,6 +25,7 @@ const AuthProvider = ({ children }) => {
     }
 
     const signIn = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
@@ -32,6 +35,7 @@ const AuthProvider = ({ children }) => {
                 const uid = user.uid;
                 updateUser(user);
                 console.log(uid);
+                setLoading(false);
             } else {
                 // User is signed out
                 console.log('user has signed out');
@@ -44,11 +48,13 @@ const AuthProvider = ({ children }) => {
     }, [user]);
 
     const logOut = () => {
+        setLoading(true);
         return signOut(auth);
     }
 
     const authInfo = {
         user,
+        loading,
         createUser,
         updateUser,
         signIn,

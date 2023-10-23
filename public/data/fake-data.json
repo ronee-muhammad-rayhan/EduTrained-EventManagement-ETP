@@ -1,0 +1,161 @@
+{
+    "services": [
+      {
+        "id": 1,
+        "name": "Workshop Hosting",
+        "image": "workshop.jpg",
+        "price": "$499",
+        "shortDescription": "Host your educational workshop on our platform. Reach a global audience and manage registrations effortlessly.",
+        "detailsInfo": {
+          "description": "Our workshop hosting service is designed to make organizing and conducting educational workshops a seamless experience. We offer a range of features to support your event, including easy registration management, expert support, and global reach. Whether you're an educator, trainer, or organization, our platform is the perfect solution for delivering impactful workshops.",
+          "keyFeatures": [
+            "Global reach to a diverse audience",
+            "Effortless registration management with real-time updates",
+            "Expert support to assist with technical and logistical issues",
+            "Customizable branding and promotion options"
+          ],
+          "testimonials": [
+            {
+              "clientName": "John Doe",
+              "testimonial": "This service made organizing our workshops a breeze. Highly recommended!"
+            },
+            {
+              "clientName": "Mary Johnson",
+              "testimonial": "We were able to expand our workshop's reach and engage a global audience, thanks to this hosting service."
+            }
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "name": "Webinar Management",
+        "image": "webinar.jpg",
+        "price": "$349",
+        "shortDescription": "Manage and promote your webinars with ease. Get detailed analytics and engage with your audience.",
+        "detailsInfo": {
+          "description": "Our webinar management service provides you with the tools and features needed to plan, promote, and host successful webinars. Whether you're an educator, professional, or organization, our platform offers comprehensive analytics, audience engagement tools, and effortless promotion, making your webinars more effective and engaging.",
+          "keyFeatures": [
+            "Detailed analytics and reporting to measure the impact of your webinars",
+            "Audience engagement tools, including polls and Q&A sessions",
+            "Effortless promotion with customizable registration pages and email marketing",
+            "Real-time support to ensure smooth webinar execution"
+          ],
+          "testimonials": [
+            {
+              "clientName": "Jane Smith",
+              "testimonial": "We've seen a significant increase in our webinar attendees since using this service."
+            },
+            {
+              "clientName": "David Wilson",
+              "testimonial": "This webinar management service streamlined our webinars and enhanced our audience engagement."
+            }
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "name": "Career Fair Organization",
+        "image": "career-fair.jpg",
+        "price": "$899",
+        "shortDescription": "Organize successful career fairs with our comprehensive event planning and management tools.",
+        "detailsInfo": {
+          "description": "Our career fair organization service offers end-to-end support for planning and managing successful career fairs. Whether you're an educational institution or a professional organization, our platform provides booth management, attendee registration, and networking opportunities to make your career fair a success.",
+          "keyFeatures": [
+            "Booth management and allocation for exhibitors",
+            "Efficient attendee registration and check-in",
+            "Networking tools to connect job seekers with employers",
+            "Promotion and marketing support for increased participation"
+          ],
+          "testimonials": [
+            {
+              "clientName": "Sarah Johnson",
+              "testimonial": "Our career fair was a huge success, thanks to the excellent support and tools provided by this service."
+            },
+            {
+              "clientName": "Mark Davis",
+              "testimonial": "We saw a significant increase in the number of exhibitors and job seekers attending our career fair after using this service."
+            }
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "name": "Educational Conference Support",
+        "image": "conference.jpg",
+        "price": "$699",
+        "shortDescription": "Plan, promote, and execute educational conferences efficiently with our expert assistance.",
+        "detailsInfo": {
+          "description": "Our educational conference support service offers comprehensive solutions for planning, promoting, and executing successful conferences. Whether you're an educational institution or a professional organization, we provide expert guidance and tools for a seamless conference experience.",
+          "keyFeatures": [
+            "End-to-end conference planning and logistical support",
+            "Efficient promotional strategies to attract attendees",
+            "Engaging sessions and content curation",
+            "Real-time technical support and troubleshooting"
+          ],
+          "testimonials": [
+            {
+              "clientName": "Emily Roberts",
+              "testimonial": "Our educational conference received positive feedback from attendees and speakers, all thanks to this service."
+            },
+            {
+              "clientName": "Michael Adams",
+              "testimonial": "The professional guidance and support we received made our conference a huge success."
+            }
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "name": "Training Program Promotion",
+        "image": "training-program.jpg",
+        "price": "$449",
+        "shortDescription": "Promote your training programs on our platform to attract a larger audience.",
+        "detailsInfo": {
+          "description": "Our training program promotion service is tailored to help you reach a wider audience and promote your training programs effectively. Whether you're an individual trainer or an organization, our platform offers promotion tools and strategies to boost program enrollment and engagement.",
+          "keyFeatures": [
+            "Customizable program listings and descriptions",
+            "Audience targeting and email marketing support",
+            "Analytics to track program performance and engagement",
+            "Real-time support for program promotion"
+          ],
+          "testimonials": [
+            {
+              "clientName": "Lisa Turner",
+              "testimonial": "We saw a significant increase in the number of participants in our training programs after using this promotion service."
+            },
+            {
+              "clientName": "Kevin White",
+              "testimonial": "The support and promotional strategies helped us expand the reach of our training programs."
+            }
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "name": "Online Learning Assessment",
+        "image": "online-assessment.jpg",
+        "price": "$199",
+        "shortDescription": "Develop and administer online quizzes and assessments for educational and training programs.",
+        "detailsInfo": {
+          "description": "Our online learning assessment service provides a platform to create and administer quizzes, tests, and assessments for educational and training programs. Whether you're an educator or a training provider, our service offers a user-friendly interface and real-time performance tracking for your learners.",
+          "keyFeatures": [
+            "User-friendly assessment creation tools",
+            "Automated grading and instant feedback for learners",
+            "Performance analytics and tracking for instructors",
+            "Flexible assessment options, including quizzes and exams"
+          ],
+          "testimonials": [
+            {
+              "clientName": "Sophia Anderson",
+              "testimonial": "Our learners found the assessments easy to use and appreciated the instant feedback."
+            },
+            {
+              "clientName": "Robert Lewis",
+              "testimonial": "This service simplified the assessment process for our instructors and learners."
+            }
+          ]
+        }
+      }
+    ]
+  }
+  

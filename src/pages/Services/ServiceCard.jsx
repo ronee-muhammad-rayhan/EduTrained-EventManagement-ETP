@@ -20,7 +20,7 @@ const ServiceCard = ({ service }) => {
                             <div className="badge badge-secondary">NEW</div>
                         </h2>
                         <p>{description}</p>
-                        <p>{price}</p>
+                        <p>${price}</p>
                     </div>
                     <button onClick={handleSeeDetails} className="btn btn-secondary flex-0">See Details</button>
                 </div>
