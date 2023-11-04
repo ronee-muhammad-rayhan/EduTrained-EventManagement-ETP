@@ -38,6 +38,7 @@ export const router = createBrowserRouter([
                 path: '/services',
                 element: <PrivateRoutes><Services></Services></PrivateRoutes>,
                 loader: () => fetch('/data/events.json'),
+                // loader: () => fetch('/data/fake-data.json'),
             },
             {
                 path: '/services/:id',

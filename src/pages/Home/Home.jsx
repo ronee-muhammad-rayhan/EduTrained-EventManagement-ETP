@@ -1,3 +1,4 @@
+import Services from "../Services/Services";
 import Banner from "./Banner";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
             <div className="text-3xl">This is Homepage</div>
             <Banner></Banner>
+            <Services></Services>
         </div>
     );
 };

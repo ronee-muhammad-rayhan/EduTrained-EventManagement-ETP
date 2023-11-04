@@ -3,7 +3,7 @@
       {
         "id": 1,
         "name": "Workshop Hosting",
-        "image": "workshop.jpg",
+        "image": "https://img.freepik.com/free-vector/webinar-design-with-monitors_23-2147760306.jpg?w=1380&t=st=1699075936~exp=1699076536~hmac=cc94273755f34d74d24898fae548deb24ff96b23191b1b91225662cc6168af0b",
         "price": "$499",
         "shortDescription": "Host your educational workshop on our platform. Reach a global audience and manage registrations effortlessly.",
         "detailsInfo": {
