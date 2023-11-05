@@ -3,7 +3,7 @@
       {
         "id": 1,
         "name": "Workshop Hosting",
-        "image": "https://img.freepik.com/free-vector/webinar-design-with-monitors_23-2147760306.jpg?w=1380&t=st=1699075936~exp=1699076536~hmac=cc94273755f34d74d24898fae548deb24ff96b23191b1b91225662cc6168af0b",
+        "image": "https://img.freepik.com/free-vector/horizontal-banners-business-training_1284-8358.jpg?w=1380&t=st=1699078166~exp=1699078766~hmac=019e006f0fbb098b82f65819b36fee1dbda0345ff10103f20179d11a8a98c1f7",
         "price": "$499",
         "shortDescription": "Host your educational workshop on our platform. Reach a global audience and manage registrations effortlessly.",
         "detailsInfo": {
@@ -29,7 +29,7 @@
       {
         "id": 2,
         "name": "Webinar Management",
-        "image": "webinar.jpg",
+        "image": "https://img.freepik.com/free-vector/webinar-design-with-monitors_23-2147760306.jpg?w=1380&t=st=1699075936~exp=1699076536~hmac=cc94273755f34d74d24898fae548deb24ff96b23191b1b91225662cc6168af0b",
         "price": "$349",
         "shortDescription": "Manage and promote your webinars with ease. Get detailed analytics and engage with your audience.",
         "detailsInfo": {
@@ -55,7 +55,7 @@
       {
         "id": 3,
         "name": "Career Fair Organization",
-        "image": "career-fair.jpg",
+        "image": "https://img.freepik.com/free-vector/human-resources-career-concept-print_1284-14713.jpg?w=1380&t=st=1699078443~exp=1699079043~hmac=d14da352b2e6737e6631a8bfa2419137f32ed71b47d487b4692fae41e6877ea0",
         "price": "$899",
         "shortDescription": "Organize successful career fairs with our comprehensive event planning and management tools.",
         "detailsInfo": {
