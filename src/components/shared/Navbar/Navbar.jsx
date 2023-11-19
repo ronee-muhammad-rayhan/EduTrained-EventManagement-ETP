@@ -2,13 +2,12 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
-    const { user, logOut, updateUser } = useAuth();
+    const { user, logOut } = useAuth();
 
     const handleLogOut = () => {
         logOut()
             .then(() => {
                 // Sign-out successful.
-                updateUser(null);
                 console.log('log-out successful');
             }).catch((error) => {
                 // An error happened.

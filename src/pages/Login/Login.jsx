@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
-    const { updateUser } = useAuth();
 
     const [error, setError] = useState('');
     const navigate = useNavigate();
@@ -13,16 +12,15 @@ const Login = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        const formdata = new FormData(form.current);
-        // console.log(formdata.email);
-        const email = formdata.get('email');
-        const password = formdata.get('password');
+        const formData = new FormData(form.current);
+        // console.log(formData.email);
+        const email = formData.get('email');
+        const password = formData.get('password');
         console.log(email, password);
         signIn(email, password)
             .then((userCredential) => {
                 console.log(userCredential.user);
-                updateUser(userCredential.user);
-                navigate('/dashboard');
+                navigate('/');
             })
             .catch((error) => {
                 setError(error.message);
