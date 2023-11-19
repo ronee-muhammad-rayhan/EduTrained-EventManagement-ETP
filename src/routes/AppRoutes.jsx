@@ -20,7 +20,8 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('/data/events.json'),
+                // loader: () => fetch('/data/events.json'),
+                loader: () => fetch('/data/fake-data.json'),
             },
             {
                 path: "/login",
@@ -37,7 +38,7 @@ export const router = createBrowserRouter([
             {
                 path: '/services',
                 element: <PrivateRoutes><Services></Services></PrivateRoutes>,
-                loader: () => fetch('/data/events.json'),
+                loader: () => fetch('/data/fake-data.json'),
                 // loader: () => fetch('/data/fake-data.json'),
             },
             {

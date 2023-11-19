@@ -48,7 +48,7 @@ const Navbar = () => {
     </>
 
     return (
-        <>
+        <nav className="mb-4">
             <div className="flex flex-col md:flex-row navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -59,7 +59,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">Event Management</a>
+                    <a className="btn btn-ghost normal-case text-2xl text-pink-600">EduTrained</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="flex md:gap-6 lg:gap-8 menu menu-horizontal px-1">
@@ -76,7 +76,7 @@ const Navbar = () => {
                     }
                 </div>
             </div>
-        </>
+        </nav>
     );
 };
 

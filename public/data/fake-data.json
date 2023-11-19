@@ -4,7 +4,7 @@
         "id": 1,
         "name": "Workshop Hosting",
         "image": "https://img.freepik.com/free-vector/horizontal-banners-business-training_1284-8358.jpg?w=1380&t=st=1699078166~exp=1699078766~hmac=019e006f0fbb098b82f65819b36fee1dbda0345ff10103f20179d11a8a98c1f7",
-        "price": "$499",
+        "price": 499,
         "shortDescription": "Host your educational workshop on our platform. Reach a global audience and manage registrations effortlessly.",
         "detailsInfo": {
           "description": "Our workshop hosting service is designed to make organizing and conducting educational workshops a seamless experience. We offer a range of features to support your event, including easy registration management, expert support, and global reach. Whether you're an educator, trainer, or organization, our platform is the perfect solution for delivering impactful workshops.",
@@ -30,7 +30,7 @@
         "id": 2,
         "name": "Webinar Management",
         "image": "https://img.freepik.com/free-vector/webinar-design-with-monitors_23-2147760306.jpg?w=1380&t=st=1699075936~exp=1699076536~hmac=cc94273755f34d74d24898fae548deb24ff96b23191b1b91225662cc6168af0b",
-        "price": "$349",
+        "price": 349,
         "shortDescription": "Manage and promote your webinars with ease. Get detailed analytics and engage with your audience.",
         "detailsInfo": {
           "description": "Our webinar management service provides you with the tools and features needed to plan, promote, and host successful webinars. Whether you're an educator, professional, or organization, our platform offers comprehensive analytics, audience engagement tools, and effortless promotion, making your webinars more effective and engaging.",
@@ -56,7 +56,7 @@
         "id": 3,
         "name": "Career Fair Organization",
         "image": "https://img.freepik.com/free-vector/human-resources-career-concept-print_1284-14713.jpg?w=1380&t=st=1699078443~exp=1699079043~hmac=d14da352b2e6737e6631a8bfa2419137f32ed71b47d487b4692fae41e6877ea0",
-        "price": "$899",
+        "price": 899,
         "shortDescription": "Organize successful career fairs with our comprehensive event planning and management tools.",
         "detailsInfo": {
           "description": "Our career fair organization service offers end-to-end support for planning and managing successful career fairs. Whether you're an educational institution or a professional organization, our platform provides booth management, attendee registration, and networking opportunities to make your career fair a success.",
@@ -81,8 +81,8 @@
       {
         "id": 4,
         "name": "Educational Conference Support",
-        "image": "conference.jpg",
-        "price": "$699",
+        "image": "https://img.freepik.com/free-vector/education-page-design-with-news-opinion-guides-symbols-flat-illustration_1284-29475.jpg?w=1480&t=st=1699956102~exp=1699956702~hmac=27a008db5e5a6bd4199260f112834745535d585308f5c321613d7766720f7e70",
+        "price": 699,
         "shortDescription": "Plan, promote, and execute educational conferences efficiently with our expert assistance.",
         "detailsInfo": {
           "description": "Our educational conference support service offers comprehensive solutions for planning, promoting, and executing successful conferences. Whether you're an educational institution or a professional organization, we provide expert guidance and tools for a seamless conference experience.",
@@ -107,8 +107,8 @@
       {
         "id": 5,
         "name": "Training Program Promotion",
-        "image": "training-program.jpg",
-        "price": "$449",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-private-school-webinar_23-2149725315.jpg?w=2000&t=st=1699956215~exp=1699956815~hmac=d0fc28d2c1f347c16bb8a4b07d855acaa3cad205087efb95e20e67ab7bf77a4c",
+        "price": 449,
         "shortDescription": "Promote your training programs on our platform to attract a larger audience.",
         "detailsInfo": {
           "description": "Our training program promotion service is tailored to help you reach a wider audience and promote your training programs effectively. Whether you're an individual trainer or an organization, our platform offers promotion tools and strategies to boost program enrollment and engagement.",
@@ -133,8 +133,8 @@
       {
         "id": 6,
         "name": "Online Learning Assessment",
-        "image": "online-assessment.jpg",
-        "price": "$199",
+        "image": "https://img.freepik.com/free-vector/online-learning-landing-page-template_23-2148923265.jpg?w=1800&t=st=1699956352~exp=1699956952~hmac=9385811ba93469446fda700022b13652b1a874ceac41215a2113c5c7e09eeb2e",
+        "price": 199,
         "shortDescription": "Develop and administer online quizzes and assessments for educational and training programs.",
         "detailsInfo": {
           "description": "Our online learning assessment service provides a platform to create and administer quizzes, tests, and assessments for educational and training programs. Whether you're an educator or a training provider, our service offers a user-friendly interface and real-time performance tracking for your learners.",

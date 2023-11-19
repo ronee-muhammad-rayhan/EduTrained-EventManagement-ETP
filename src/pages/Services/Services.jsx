@@ -4,7 +4,7 @@ import useAuth from "../../hooks/useAuth";
 
 const Services = () => {
     const services = useLoaderData();
-    console.log(services);
+    console.log(services.services);
     const { loading } = useAuth();
 
     if (loading) {
@@ -13,7 +13,7 @@ const Services = () => {
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-1 space-x-1">
             {
-                services.map(service => <ServiceCard key={service.id} service={service}></ServiceCard>)
+                services.services?.map(service => <ServiceCard key={service.id} service={service}></ServiceCard>)
             }
         </div>
     );
