@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
+import { FaUserCheck } from "react-icons/fa";
 
 const Navbar = () => {
     const { user, logOut } = useAuth();
@@ -87,13 +88,32 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex flex-col md:flex-row navbar-end">
-                    {
-                        user && user?.email
-                    }
-                    <img src={user?.photoURL} alt={user?.displayName} />
+                    <div className="flex flex-col xl:flex-row navbar-end items-center">
+                        <div className="flex flex-col items-center justify-center p-2">
+                            <div className="flex space-x-5">
+                                <FaUserCheck className="w-12 h-12 rounded-full ri ri dark:bg-gray-500 ri ri"></FaUserCheck>
+                            </div>
+                        </div>
+                        <div className="mb-2">
+                            {
+                                user && user?.email
+                            }
+                        </div>
+                        {/* <img src={user?.photoURL} alt={user?.displayName} /> */}
+
+
+                        {/* <div className="flex flex-col items-center justify-center">
+                        <div className="flex space-x-5">
+                            <img alt="" className="w-12 h-12 rounded-full ri ri dark:bg-gray-500 ri ri" src="https://source.unsplash.com/40x40/?portrait?1" />
+                        </div>
+                        </div> */}
+
+                    </div >
+
                     {
                         user ? <a onClick={handleLogOut} className="btn">Logout</a> : <Link to='/login' className="btn">Login</Link>
                     }
+
                 </div>
             </div>
         </nav>
