@@ -12,7 +12,6 @@ import Services from "../pages/Services/Services";
 import Contact from "../pages/Contact/Contact";
 import Blog from "../pages/Blog/Blog";
 
-
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -22,7 +21,6 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                // loader: () => fetch('/data/events.json'),
                 loader: () => fetch('/data/fake-data.json'),
             },
             {
@@ -45,11 +43,9 @@ export const router = createBrowserRouter([
                 path: '/services',
                 element: <Services></Services>,
                 loader: () => fetch('/data/fake-data.json'),
-                // loader: () => fetch('/data/fake-data.json'),
             },
             {
                 path: '/services/:id',
-                // element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
                 element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
                 loader: () => fetch('/data/fake-data.json'),
             },

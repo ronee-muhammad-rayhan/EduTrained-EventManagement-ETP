@@ -2,15 +2,12 @@ import PropTypes from "prop-types"
 import { createContext, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
-import useAuth from "../hooks/useAuth";
-
 
 export const AuthContext = createContext(null);
 
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
-    useAuth();
 
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -32,13 +29,10 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
-                // const uid = user.uid;
                 setUser(user);
-                // console.log(uid);
                 console.log('currentUser: ', user);
                 setLoading(false);
             } else {
-                // User is signed out
                 console.log('user has signed out');
                 setLoading(false);
                 console.log('currentUser: ', user);

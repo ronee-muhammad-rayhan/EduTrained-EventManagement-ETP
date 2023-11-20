@@ -5,25 +5,21 @@ import useAuth from "../../hooks/useAuth";
 const Login = () => {
 
     const [error, setError] = useState('');
-    const navigate = useNavigate();
-    const location = useLocation();
-    const navigateTo = location?.state || '/';
-
-    const form = useRef(null);
     const { signIn } = useAuth();
+    const form = useRef(null);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const navigateTo = location?.state || '/';
 
     const handleSubmit = e => {
         e.preventDefault();
         const formData = new FormData(form.current);
-        // console.log(formData.email);
         const email = formData.get('email');
         const password = formData.get('password');
         console.log(email, password);
         signIn(email, password)
             .then((userCredential) => {
                 console.log(userCredential.user);
-                // navigate('/');
-                // console.log(location);
                 navigate(navigateTo);
             })
             .catch((error) => {
@@ -31,7 +27,6 @@ const Login = () => {
                 console.error(error);
             });
     }
-    // console.log(location);
     return (
         <div className="pb-12">
             <h3 className="text-3xl text-center">Please Login</h3>

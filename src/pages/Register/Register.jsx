@@ -3,19 +3,14 @@ import useAuth from "../../hooks/useAuth";
 import { useRef, useState } from "react";
 
 const Register = () => {
-    const { updateUserProfile } = useAuth();
-    // const [isAuthenticated, setIsAuthenticated] = useState(null);
-
+    const { createUser, user, updateUserProfile } = useAuth();
     const [error, setError] = useState('');
-    const navigate = useNavigate();
-
     const form = useRef(null);
-    const { createUser, user } = useAuth();
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(form.current);
-        // console.log(formData.email);
         const name = formData.get('name');
         const email = formData.get('email');
         const password = formData.get('password');
@@ -30,11 +25,8 @@ const Register = () => {
         await createUser(email, password)
             .then((userCredential) => {
                 console.log('user created: ', userCredential.user);
-                // navigate('/dashboard');
-                // setIsAuthenticated(true);
             })
             .catch((error) => {
-                // setIsAuthenticated(false);
                 setError(error.message);
                 console.error(error);
             });
