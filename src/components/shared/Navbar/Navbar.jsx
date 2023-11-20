@@ -17,20 +17,9 @@ const Navbar = () => {
             .catch(error => console.log(error));
     }
 
-    // const handleLogOut = () => {
-    //     logOut()
-    //         .then(() => {
-    //             console.log('log-out successful');
-    //             navigate('/services');
-    //         }).catch((error) => {
-    //             console.log(error);
-    //         });
-    // }
-
     const navLinks = <>
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/about'>About</NavLink>
-        <NavLink to='/login'>Login</NavLink>
         <NavLink to='/register'>Register</NavLink>
         <NavLink to='/services'>Services</NavLink>
         <NavLink to='/blog'>Blog</NavLink>
