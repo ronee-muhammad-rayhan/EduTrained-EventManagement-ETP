@@ -12,7 +12,7 @@ const Register = () => {
     const form = useRef(null);
     const { createUser, user } = useAuth();
 
-    const handleSubmit = e => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(form.current);
         // console.log(formData.email);
@@ -27,7 +27,7 @@ const Register = () => {
         } else {
             return console.log("Password should at least 6 characters long with minimum one capital letter and one special character");
         }
-        createUser(email, password)
+        await createUser(email, password)
             .then((userCredential) => {
                 console.log('user created: ', userCredential.user);
                 // navigate('/dashboard');
@@ -42,7 +42,7 @@ const Register = () => {
             displayName: name,
             photoURL: photo,
         }
-        updateUserProfile(newUser)
+        await updateUserProfile(newUser)
             .then(() => {
                 console.log('user updated: ', user);
             }).catch(error => {
