@@ -5,7 +5,7 @@ const ServiceDetails = () => {
     console.log(id);
     const data = useLoaderData();
     console.log(data);
-    const currentService = data.find(service => service.id === parseInt(id));
+    const currentService = data.services.find(service => service.id === parseInt(id));
     console.log(currentService);
     const { title, description, image, price } = currentService;
     return (

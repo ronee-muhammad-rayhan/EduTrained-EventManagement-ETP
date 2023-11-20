@@ -37,15 +37,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/services',
-                element: <PrivateRoutes><Services></Services></PrivateRoutes>,
+                element: <Services></Services>,
                 loader: () => fetch('/data/fake-data.json'),
                 // loader: () => fetch('/data/fake-data.json'),
             },
             {
                 path: '/services/:id',
                 // element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
-                element: <ServiceDetails></ServiceDetails>,
-                loader: () => fetch('/data/events.json'),
+                element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
+                loader: () => fetch('/data/fake-data.json'),
             },
             {
                 path: '*',
