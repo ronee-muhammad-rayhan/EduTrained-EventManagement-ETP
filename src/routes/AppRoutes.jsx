@@ -9,6 +9,8 @@ import PrivateRoutes from "./ProtectedRoutes/PrivateRoutes";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import ServiceDetails from "../pages/Services/ServiceDetails";
 import Services from "../pages/Services/Services";
+import Contact from "../pages/Contact/Contact";
+import Blog from "../pages/Blog/Blog";
 
 
 export const router = createBrowserRouter([
@@ -22,6 +24,10 @@ export const router = createBrowserRouter([
                 element: <Home></Home>,
                 // loader: () => fetch('/data/events.json'),
                 loader: () => fetch('/data/fake-data.json'),
+            },
+            {
+                path: "/about",
+                element: <Home></Home>,
             },
             {
                 path: "/login",
@@ -46,6 +52,14 @@ export const router = createBrowserRouter([
                 // element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
                 element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
                 loader: () => fetch('/data/fake-data.json'),
+            },
+            {
+                path: '/blog',
+                element: <PrivateRoutes><Blog></Blog></PrivateRoutes>,
+            },
+            {
+                path: '/contact',
+                element: <PrivateRoutes><Contact></Contact></PrivateRoutes>,
             },
             {
                 path: '*',

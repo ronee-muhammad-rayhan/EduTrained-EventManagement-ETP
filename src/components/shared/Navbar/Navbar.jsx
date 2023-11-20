@@ -23,6 +23,13 @@ const Navbar = () => {
                 color: isPending ? 'blue' : isActive ? 'red' : 'black'
             };
         }}>Home</NavLink>
+        <NavLink to='/about' style={({ isActive, isPending }) => {
+            return {
+                // fontWeight: isActive ? "bold" : "",
+                // color: isPending ? "red" : "black",
+                color: isPending ? 'blue' : isActive ? 'red' : 'black'
+            };
+        }}>About</NavLink>
         <NavLink to='/login' style={({ isActive, isPending }) => {
             return {
                 // fontWeight: isActive ? "bold" : "",
@@ -44,6 +51,20 @@ const Navbar = () => {
                 color: isPending ? 'blue' : isActive ? 'red' : 'black'
             };
         }}>Services</NavLink>
+        <NavLink to='/blog' style={({ isActive, isPending }) => {
+            return {
+                // fontWeight: isActive ? "bold" : "",
+                // color: isPending ? "red" : "black",
+                color: isPending ? 'blue' : isActive ? 'red' : 'black'
+            };
+        }}>Blog</NavLink>
+        <NavLink to='/contact' style={({ isActive, isPending }) => {
+            return {
+                // fontWeight: isActive ? "bold" : "",
+                // color: isPending ? "red" : "black",
+                color: isPending ? 'blue' : isActive ? 'red' : 'black'
+            };
+        }}>Contact</NavLink>
     </>
 
     return (
