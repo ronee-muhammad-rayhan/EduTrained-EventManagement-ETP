@@ -88,7 +88,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex flex-col md:flex-row navbar-end">
-                    <div className="flex flex-col xl:flex-row navbar-end items-center">
+                    <div className="flex flex-col xl:flex-row-reverse navbar-end items-center">
                         <div className="flex flex-col items-center justify-center p-2">
                             <div className="flex space-x-5">
                                 <FaUserCheck className="w-12 h-12 rounded-full ri ri dark:bg-gray-500 ri ri"></FaUserCheck>
