@@ -17,25 +17,30 @@ const AuthProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
-    const updateUserProfile = (user) => {
-        return updateProfile(auth.currentUser, user);
-    }
-
     const signIn = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
+    const logOut = () => {
+        setLoading(true);
+        return signOut(auth);
+    }
+
+    const updateUserProfile = (profileObject) => {
+        return updateProfile(auth.currentUser, profileObject);
+    }
+
     useEffect(() => {
-        const unSubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setUser(user);
-                console.log('currentUser: ', user);
+        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+            if (currentUser) {
+                setUser(currentUser);
+                console.log('currentUser: ', currentUser);
                 setLoading(false);
             } else {
                 console.log('user has signed out');
                 setLoading(false);
-                console.log('currentUser: ', user);
+                console.log('currentUser: ', currentUser);
             }
         });
 
@@ -44,15 +49,11 @@ const AuthProvider = ({ children }) => {
         }
     }, [user]);
 
-    const logOut = () => {
-        setLoading(true);
-        return signOut(auth);
-    }
-
     const authInfo = {
         user,
         loading,
         createUser,
+        setUser,
         updateUserProfile,
         signIn,
         logOut,

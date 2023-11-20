@@ -4,19 +4,28 @@ import { FaUserCheck } from "react-icons/fa";
 import './Navbar.css'
 
 const Navbar = () => {
-    const { user, logOut } = useAuth();
+    const { user, setUser, logOut } = useAuth();
     const navigate = useNavigate();
 
-    const handleLogOut = async () => {
-        await logOut()
+    const handleLogOut = () => {
+        logOut()
             .then(() => {
-                console.log('log-out successful');
+                console.log('UserEmail: ', user?.email);
+                setUser(null);
                 navigate('/login');
-
-            }).catch((error) => {
-                console.log(error);
-            });
+            })
+            .catch(error => console.log(error));
     }
+
+    // const handleLogOut = () => {
+    //     logOut()
+    //         .then(() => {
+    //             console.log('log-out successful');
+    //             navigate('/services');
+    //         }).catch((error) => {
+    //             console.log(error);
+    //         });
+    // }
 
     const navLinks = <>
         <NavLink to='/'>Home</NavLink>
@@ -78,7 +87,11 @@ const Navbar = () => {
                         </div>
                     </div >
                     {
-                        user ? <a onClick={handleLogOut} className="btn">Logout</a> : <Link to='/login' className="btn">Login</Link>
+                        user?.email ? <>
+                            <button onClick={handleLogOut} className="btn">Logout</button>
+                        </> : <>
+                            <Link to='/login' className="btn">Login</Link>
+                        </>
                     }
                 </div>
             </div>
