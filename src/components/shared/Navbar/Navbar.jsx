@@ -1,15 +1,18 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import { FaUserCheck } from "react-icons/fa";
 
 const Navbar = () => {
     const { user, logOut } = useAuth();
+    const navigate = useNavigate();
 
-    const handleLogOut = () => {
-        logOut()
+    const handleLogOut = async () => {
+        await logOut()
             .then(() => {
                 // Sign-out successful.
                 console.log('log-out successful');
+                navigate('/login');
+
             }).catch((error) => {
                 // An error happened.
                 console.log(error);
@@ -109,7 +112,8 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                     :
-                                    undefined
+                                    // undefined
+                                    ''
 
                         }
                         {/* https://mambaui.com/components/avatar */}

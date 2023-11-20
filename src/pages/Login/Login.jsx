@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 
@@ -6,6 +6,8 @@ const Login = () => {
 
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+    const navigateTo = location?.state || '/';
 
     const form = useRef(null);
     const { signIn } = useAuth();
@@ -20,14 +22,16 @@ const Login = () => {
         signIn(email, password)
             .then((userCredential) => {
                 console.log(userCredential.user);
-                navigate('/');
+                // navigate('/');
+                // console.log(location);
+                navigate(navigateTo);
             })
             .catch((error) => {
                 setError(error.message);
                 console.error(error);
             });
     }
-
+    // console.log(location);
     return (
         <div className="pb-12">
             <h3 className="text-3xl text-center">Please Login</h3>

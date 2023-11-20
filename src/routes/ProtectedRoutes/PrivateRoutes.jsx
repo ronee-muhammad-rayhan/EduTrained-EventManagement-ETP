@@ -1,12 +1,13 @@
 import PropTypes from "prop-types"
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const PrivateRoutes = ({
-    redirectPath = '/login',
+    // redirectPath = '/login',
     children,
   }) => {
     const {user, loading}=useAuth();
+    const location = useLocation();
     if(loading){
       return <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-400"></div>
     //   return <div className="flex items-center justify-center space-x-2">
@@ -16,7 +17,9 @@ const PrivateRoutes = ({
     // </div>
     }
     if (!user) {
-      return <Navigate to={redirectPath} replace />;
+      console.log(location);
+      console.log(location.pathname);
+      return <Navigate to= '/login'/* {redirectPath} */ state={location?.pathname} replace />;
     }
   
     return children;
