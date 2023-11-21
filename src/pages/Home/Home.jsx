@@ -3,10 +3,12 @@ import Slider from "./Slider";
 import ServiceCard from "../Services/ServiceCard";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { useState } from "react";
 // ..
 // AOS.init();
 
 const Home = () => {
+    const [testimonials, setTestimonials] = useState([]);
     AOS.init({
         // Global settings:
         disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -31,6 +33,29 @@ const Home = () => {
     });
 
     const services = useLoaderData();
+
+    // let tempts;
+    // let tempts = [];
+    let tempts = [];
+
+    const tempTestimonials = services?.services?.map(service => service.detailsInfo.testimonials.map(testimonial => tempts.push(testimonial)));
+    // const tempTestimonials = services?.services?.map(service => service.detailsInfo.testimonials);
+    console.log(tempTestimonials);
+    console.log(tempts);
+
+    // services?.services?.forEach(service => service.detailsInfo.testimonials.forEach(testimonial => {
+    // services?.services?.forEach(service => service.detailsInfo.testimonials.forEach(testimonial => {
+    // const tempTestimonials = services?.services?.forEach(service => service.detailsInfo.testimonials.forEach(testimonial => {
+    // const tempTestimonials = services?.services?.map(service => service.detailsInfo.testimonials.forEach(testimonial => {
+    // const tempTestimonials = services?.services?.map(service => service.detailsInfo.testimonials.map(testimonial => {
+    // console.log(testimonial.testimonial);
+    // [...tempts, testimonial.testimonial];
+    // tempts.push(testimonial.testimonial);
+    // }));
+    // const tempTestimonials = services?.services?.map(service => service.detailsInfo.testimonials.map(testimonial => testimonial.testimonial));
+    // const tempTestimonials = services?.services?.map(service => service.detailsInfo.testimonials);
+    // console.log(tempTestimonials);
+    // console.log(tempts);
 
     return (
         <div>
