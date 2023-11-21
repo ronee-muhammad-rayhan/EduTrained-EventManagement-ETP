@@ -1,10 +1,11 @@
 import PropTypes from "prop-types"
 import { createContext, useEffect, useState } from "react";
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, OAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
 
-const providerGithub = new GithubAuthProvider();
 const providerGoogle = new GoogleAuthProvider();
+const providerApple = new OAuthProvider('apple.com');
+const providerGithub = new GithubAuthProvider();
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
@@ -25,6 +26,10 @@ const AuthProvider = ({ children }) => {
 
     const loginWithGoogle = () => {
         return signInWithPopup(auth, providerGoogle);
+    }
+
+    const loginWithApple = () => {
+        return signInWithPopup(auth, providerApple);
     }
 
     const loginWithGithub = () => {
@@ -66,6 +71,7 @@ const AuthProvider = ({ children }) => {
         updateUserProfile,
         signIn,
         loginWithGoogle,
+        loginWithApple,
         loginWithGithub,
         logOut,
     }
