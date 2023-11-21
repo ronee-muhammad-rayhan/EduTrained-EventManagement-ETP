@@ -4,7 +4,9 @@ import { useRef, useState } from "react";
 
 const Register = () => {
     const { createUser, user, updateUserProfile } = useAuth();
-    const [error, setError] = useState('');
+    const [firebaseError, setFirebaseError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [validation, setValidation] = useState('');
     const form = useRef(null);
     const navigate = useNavigate();
 
@@ -20,6 +22,7 @@ const Register = () => {
         if (passwordRegex.test(password)) {
             console.log("Password is valid");
         } else {
+            setPasswordError("Password should at least 6 characters long with minimum one capital letter and one special character");
             return console.log("Password should at least 6 characters long with minimum one capital letter and one special character");
         }
         await createUser(email, password)
@@ -27,21 +30,47 @@ const Register = () => {
                 console.log('user created: ', userCredential.user);
             })
             .catch((error) => {
-                setError(error.message);
                 console.error(error);
+                console.log(error);
+                setFirebaseError(error.message);
+                // return setError(error.message);
+                if (error.code == "auth/email-already-in-use") {
+                    setValidation("The email address is already in use");
+                    alert("The email address is already in use");
+                    // alert();
+
+                } else if (error.code == "auth/invalid-email") {
+                    setValidation("The email address is not valid.");
+                    alert("The email address is not valid.");
+                } else if (error.code == "auth/operation-not-allowed") {
+                    setValidation("Operation not allowed.");
+                    alert("Operation not allowed.");
+                } else if (error.code == "auth/weak-password") {
+                    setValidation("The password is too weak.");
+                    alert("The password is too weak.");
+                }
             });
-        const newUser = {
-            displayName: name,
-            photoURL: photo,
+        // console.log(firebaseError);
+        // if (validation) return;
+        // if (firebaseError) return;
+        // console.log(firebaseError);
+        if (!validation) {
+            const newUser = {
+                displayName: name,
+                photoURL: photo,
+            }
+            await updateUserProfile(newUser)
+                .then(() => {
+                    console.log('user updated: ', user);
+                    navigate('/');
+                }).catch(error => {
+                    console.error(error);
+                    setFirebaseError(error);
+                })
         }
-        await updateUserProfile(newUser)
-            .then(() => {
-                console.log('user updated: ', user);
-            }).catch(error => {
-                console.error(error);
-            })
-        navigate('/dashboard');
+        // navigate('/dashboard');
     }
+
     return (
         <div className="w-full mx-auto pb-10">
             <h3 className="text-3xl text-center">Please Register</h3>
@@ -58,12 +87,18 @@ const Register = () => {
                     </label>
                     <input type="email" name="email" placeholder="Your Email" className="input input-bordered" required />
                 </div>
+                {
+                    validation && <p className="text-center text-red-500">{validation}</p>
+                }
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
                     <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                 </div>
+                {
+                    passwordError && <p className="text-red-600">{passwordError}</p>
+                }
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">PhotoURL</span>
@@ -97,7 +132,8 @@ const Register = () => {
                 </button>
             </div>
             <p className="text-center">Already have an account? <Link className="text-blue-600" to='/login'>Login</Link></p>
-            <p className="text-center text-red-500">{error}</p>
+            {/* <p className="text-center text-red-500">{validation}</p> */}
+            {/* <p className="text-center text-red-500">{firebaseError}</p> */}
         </div>
     );
 }

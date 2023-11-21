@@ -46,7 +46,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex flex-col md:flex-row navbar-end">
-                    <div className="flex flex-col xl:flex-row-reverse navbar-end items-center">
+                    <div className="flex flex-col xl:flex-row-reverse xl:mr-12 gap-3 navbar-end items-center">
                         {
                             user && user?.photoURL
                                 ?
