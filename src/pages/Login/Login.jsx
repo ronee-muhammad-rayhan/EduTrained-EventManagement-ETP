@@ -6,6 +6,8 @@ import Swal from "sweetalert2";
 const Login = () => {
 
     const [error, setError] = useState('');
+    // const [emailValidationError, setEmailValidationError] = useState('');
+    // const [passwordValidationError, setPasswordValidationError] = useState('');
     const { signIn, loginWithGoogle } = useAuth();
     const form = useRef(null);
     const location = useLocation();
@@ -35,7 +37,19 @@ const Login = () => {
                 navigate(navigateTo);
             })
             .catch((error) => {
-                setError(error.message);
+                // setError(error.message);
+                // if (error.code === "auth/invalid-login-credentials") {
+                //     setEmailValidationError("email doesn't match");
+                // } else if (error.code === "") {
+                //     setPasswordValidationError("password doesn't match");
+                // } else {
+                //     setError("something went wrong");
+                // }
+                if (error.code === "auth/invalid-login-credentials") {
+                    setError("email and/or password do(es)n't match");
+                } else {
+                    setError("something went wrong");
+                }
                 console.error(error);
             });
     }
@@ -67,6 +81,9 @@ const Login = () => {
                     </label>
                     <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                 </div>
+                {/* {
+                    emailValidationError && <p className="text-center text-red-500">{emailValidationError}</p>
+                } */}
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Password</span>
@@ -76,6 +93,9 @@ const Login = () => {
                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                     </label>
                 </div>
+                {
+                    error && <p className="text-center text-red-500">{error}</p>
+                }
                 <div className="form-control mt-6">
                     <button type="submit" name="submit" className="btn btn-primary">Login</button>
                 </div>
@@ -103,7 +123,7 @@ const Login = () => {
                 </button>
             </div>
             <p className="text-center">Don&apos;t have an account? <Link className="text-blue-600" to='/register'>Register</Link></p>
-            <p className="text-center text-red-600">{error}</p>
+            {/* <p className="text-center text-red-600">{error}</p> */}
         </div>
     );
 };
