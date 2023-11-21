@@ -6,7 +6,9 @@ const Register = () => {
     const { createUser, user, updateUserProfile } = useAuth();
     const [firebaseError, setFirebaseError] = useState('');
     const [passwordError, setPasswordError] = useState('');
-    const [validation, setValidation] = useState('');
+    const [validation, setValidation] = useState(null);
+    // const [validation, setValidation] = useState('');
+    // let [validation, setValidation] = useState('');
     const form = useRef(null);
     const navigate = useNavigate();
 
@@ -28,6 +30,11 @@ const Register = () => {
         await createUser(email, password)
             .then((userCredential) => {
                 console.log('user created: ', userCredential.user);
+                console.log('validation', validation);
+                // setValidation('');
+                // setValidation(null);
+                setValidation("");
+                console.log('validation', validation);
             })
             .catch((error) => {
                 console.error(error);
@@ -50,11 +57,17 @@ const Register = () => {
                     alert("The password is too weak.");
                 }
             });
+        console.log('validation', validation);
+        setValidation("");
+        console.log('validation', validation);
         // console.log(firebaseError);
         // if (validation) return;
         // if (firebaseError) return;
         // console.log(firebaseError);
+        // if (!validation) {
+        // if (validation.length > 0) {
         if (!validation) {
+            // if (validation) {
             const newUser = {
                 displayName: name,
                 photoURL: photo,
@@ -62,7 +75,8 @@ const Register = () => {
             await updateUserProfile(newUser)
                 .then(() => {
                     console.log('user updated: ', user);
-                    navigate('/');
+                    setFirebaseError('');
+                    navigate('/services');
                 }).catch(error => {
                     console.error(error);
                     setFirebaseError(error);
