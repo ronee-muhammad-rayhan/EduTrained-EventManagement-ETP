@@ -18,7 +18,8 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: `{}`
+### Explanation: There is a type declaration but it doesn't work due to typo (spelling mistake). Nevertheless the consoled variable print an empty object for JavaScript's global variable concept in global scope in strict mode.
 
 <i>Write your explanation here</i>
 
@@ -43,7 +44,8 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: `"12"`
+### Explanation: When a number is concatenated with a string, the number is converted to a string in JavaScript Language. This is called type coercion.
 
 <i>Write your explanation here</i>
 
@@ -69,7 +71,8 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: `['🍕', '🍫', '🥑', '🍔']`
+### Explanation: Although info.favoriteFood is changed to "🍝", it's not directly linked to the original food array. The change only affects the info object, so food remains unchanged and still logs ['🍕', '🍫', '🥑', '🍔'].
 
 <i>Write your explanation here</i>
 
@@ -94,7 +97,8 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B: `Hi there, undefined`
+### Explanation: The output will be Hi there, undefined. Because, the function sayHi(name) expects a name parameter, but when sayHi() is called without an argument, name inside the function becomes undefined.
 
 <i>Write your explanation here</i>
 
@@ -122,7 +126,8 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: 3
+### Explanation: Truthy and Falsy values are interesting things in JavaScript's ES6 version. As 0 (zero) is a falsy value it returns false and hence inside the forEach function count variable increased three times. Therefore, count variable's value final value should be 3.
 
 <i>Write your explanation here</i>
 
