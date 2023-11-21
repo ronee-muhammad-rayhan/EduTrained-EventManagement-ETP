@@ -3,12 +3,11 @@ import useAuth from "../../hooks/useAuth";
 import { useRef, useState } from "react";
 
 const Register = () => {
+
     const { createUser, user, updateUserProfile } = useAuth();
     const [firebaseError, setFirebaseError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [validation, setValidation] = useState(null);
-    // const [validation, setValidation] = useState('');
-    // let [validation, setValidation] = useState('');
     const form = useRef(null);
     const navigate = useNavigate();
 
@@ -19,55 +18,36 @@ const Register = () => {
         const email = formData.get('email');
         const password = formData.get('password');
         const photo = formData.get('photo');
-        console.log(name, email, password, photo);
+
         const passwordRegex = /^(?=.*[A-Z])(?=.*[^a-zA-Z\d]).{6,}$/;
+
         if (passwordRegex.test(password)) {
             console.log("Password is valid");
         } else {
             setPasswordError("Password should at least 6 characters long with minimum one capital letter and one special character");
             return console.log("Password should at least 6 characters long with minimum one capital letter and one special character");
         }
+
         await createUser(email, password)
             .then((userCredential) => {
                 console.log('user created: ', userCredential.user);
-                // console.log('validation', validation);
-                // setValidation('');
-                // setValidation(null);
                 setValidation("");
-                // console.log('validation', validation);
             })
             .catch((error) => {
                 console.error(error);
                 console.log(error);
                 setFirebaseError(error.message);
-                // return setError(error.message);
                 if (error.code == "auth/email-already-in-use") {
                     setValidation("The email address is already in use");
-                    // alert("The email address is already in use");
-                    // alert();
-
                 } else if (error.code == "auth/invalid-email") {
                     setValidation("The email address is not valid.");
-                    // alert("The email address is not valid.");
                 } else if (error.code == "auth/operation-not-allowed") {
                     setValidation("Operation not allowed.");
-                    // alert("Operation not allowed.");
                 } else if (error.code == "auth/weak-password") {
                     setValidation("The password is too weak.");
-                    // alert("The password is too weak.");
                 }
             });
-        // console.log('validation', validation);
-        // setValidation("");
-        // console.log('validation', validation);
-        // console.log(firebaseError);
-        // if (validation) return;
-        // if (firebaseError) return;
-        // console.log(firebaseError);
-        // if (!validation) {
-        // if (validation.length > 0) {
-        // if (!validation) {
-        // if (validation) {
+
         if (validation) {
             const newUser = {
                 displayName: name,
@@ -83,8 +63,6 @@ const Register = () => {
                     setFirebaseError(error);
                 })
         }
-        // }
-        // navigate('/dashboard');
     }
 
     return (
@@ -148,8 +126,6 @@ const Register = () => {
                 </button>
             </div>
             <p className="text-center">Already have an account? <Link className="text-blue-600" to='/login'>Login</Link></p>
-            {/* <p className="text-center text-red-500">{validation}</p> */}
-            {/* <p className="text-center text-red-500">{firebaseError}</p> */}
             <p className="text-center text-red-500">{firebaseError}</p>
         </div>
     );
