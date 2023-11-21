@@ -30,11 +30,11 @@ const Register = () => {
         await createUser(email, password)
             .then((userCredential) => {
                 console.log('user created: ', userCredential.user);
-                console.log('validation', validation);
+                // console.log('validation', validation);
                 // setValidation('');
                 // setValidation(null);
                 setValidation("");
-                console.log('validation', validation);
+                // console.log('validation', validation);
             })
             .catch((error) => {
                 console.error(error);
@@ -43,31 +43,32 @@ const Register = () => {
                 // return setError(error.message);
                 if (error.code == "auth/email-already-in-use") {
                     setValidation("The email address is already in use");
-                    alert("The email address is already in use");
+                    // alert("The email address is already in use");
                     // alert();
 
                 } else if (error.code == "auth/invalid-email") {
                     setValidation("The email address is not valid.");
-                    alert("The email address is not valid.");
+                    // alert("The email address is not valid.");
                 } else if (error.code == "auth/operation-not-allowed") {
                     setValidation("Operation not allowed.");
-                    alert("Operation not allowed.");
+                    // alert("Operation not allowed.");
                 } else if (error.code == "auth/weak-password") {
                     setValidation("The password is too weak.");
-                    alert("The password is too weak.");
+                    // alert("The password is too weak.");
                 }
             });
-        console.log('validation', validation);
-        setValidation("");
-        console.log('validation', validation);
+        // console.log('validation', validation);
+        // setValidation("");
+        // console.log('validation', validation);
         // console.log(firebaseError);
         // if (validation) return;
         // if (firebaseError) return;
         // console.log(firebaseError);
         // if (!validation) {
         // if (validation.length > 0) {
-        if (!validation) {
-            // if (validation) {
+        // if (!validation) {
+        // if (validation) {
+        if (validation) {
             const newUser = {
                 displayName: name,
                 photoURL: photo,
@@ -82,6 +83,7 @@ const Register = () => {
                     setFirebaseError(error);
                 })
         }
+        // }
         // navigate('/dashboard');
     }
 
@@ -148,6 +150,7 @@ const Register = () => {
             <p className="text-center">Already have an account? <Link className="text-blue-600" to='/login'>Login</Link></p>
             {/* <p className="text-center text-red-500">{validation}</p> */}
             {/* <p className="text-center text-red-500">{firebaseError}</p> */}
+            <p className="text-center text-red-500">{firebaseError}</p>
         </div>
     );
 }
