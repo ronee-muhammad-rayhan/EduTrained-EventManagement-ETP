@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useRef, useState } from "react";
+import Swal from "sweetalert2";
 
 const Register = () => {
 
@@ -10,6 +11,17 @@ const Register = () => {
     const [validation, setValidation] = useState(null);
     const form = useRef(null);
     const navigate = useNavigate();
+
+    const swalNotification = () => {
+        Swal.fire({
+            title: "Welcome!",
+            text: "Registration successful",
+            icon: "success",
+            showConfirmButton: false,
+            position: "top-right",
+            timer: 1500,
+        });
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -30,6 +42,7 @@ const Register = () => {
 
         await createUser(email, password)
             .then((userCredential) => {
+                swalNotification();
                 console.log('user created: ', userCredential.user);
                 setValidation("");
             })
